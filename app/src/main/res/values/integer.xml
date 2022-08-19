@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="anim_day_interval_cycle">5000</integer>
+    <integer name="anim_day_interval_start">1000</integer>
+    <integer name="anim_day_time">1000</integer>
+</resources>

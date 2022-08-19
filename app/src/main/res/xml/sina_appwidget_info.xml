@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="320dp"
+    android:minHeight="320dp"
+    android:updatePeriodMillis="30000"
+    android:previewImage="@drawable/ic_sina_bg"
+    android:initialLayout="@layout/widget_sina"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen">
+</appwidget-provider>

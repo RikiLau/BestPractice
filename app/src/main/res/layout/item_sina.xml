@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    tools:ignore="SpUsage"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        tools:textColor="@color/black"
+        tools:text="鸡同鸭讲眼碌碌"
+        android:textSize="14dp"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>
