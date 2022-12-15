@@ -27,5 +27,13 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, PermissionsActivity::class.java)
             startActivity(intent)
         }
+        binding.tvCoroutines.setOnClickListener {
+            val intent = Intent(this, CoroutinesActivity::class.java)
+            startActivity(intent)
+        }
+        binding.tvRequestManager.setOnClickListener {
+            val intent = Intent(this, RequestManagerActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
