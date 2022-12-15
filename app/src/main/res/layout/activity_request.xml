@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvApi1Req"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/request1"
+        android:layout_margin="14dp"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@android:color/holo_blue_bright" />
+
+    <!--<TextView
+        android:id="@+id/tvApi1Res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/request2"
+        android:layout_margin="14dp"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@android:color/holo_blue_bright" />
+
+    <TextView
+        android:id="@+id/tvApi2Req"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/result1"
+        android:layout_margin="14dp"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@android:color/holo_blue_bright" />
+
+    <TextView
+        android:id="@+id/tvApi2Res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/result2"
+        android:layout_margin="14dp"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@android:color/holo_blue_bright" />-->
+
+</LinearLayout>

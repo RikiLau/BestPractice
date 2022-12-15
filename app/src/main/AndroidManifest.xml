@@ -24,6 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".PermissionsActivity" />
+        <activity android:name=".CoroutinesActivity" />
+        <activity android:name=".RequestManagerActivity" />
 
         <receiver android:name=".widget.sina.SinaWidgetProvider"
             android:exported="true">
