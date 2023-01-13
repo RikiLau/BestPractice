@@ -13,7 +13,4 @@
     <string name="ok">好的</string>
     <string name="request1">接口1请求</string>
     <string name="request2">接口2请求</string>
-    <string name="result1">接口1请求完成</string>
-    <string name="result2">接口2请求完成</string>
-
 </resources>
