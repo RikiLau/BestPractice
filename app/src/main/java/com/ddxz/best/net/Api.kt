@@ -9,5 +9,5 @@ interface Api {
      *微博热搜
      */
     @GET("/weibohot/index?key=1107497adc4bc4fad81ded6b47e2233b")
-    suspend fun weiboHot(): Sina?
+    suspend fun weiboHot(): Sina
 }

@@ -4,47 +4,55 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ddxz.best.constant.LOG_REQUEST
-import kotlinx.coroutines.delay
+import com.ddxz.best.net.ApiRepository
+import com.ddxz.best.net.BaseResult
+import com.ddxz.best.net.Sina
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
-import kotlinx.coroutines.launch
 
 class RequestManagerViewModel : ViewModel() {
 
-    val flowResult1 = flow<Boolean> {
-        delay(3000)
-        Log.d(LOG_REQUEST, "请求1请求完成")
-        emit(true)
-    }
-    val flowResult2 = flow<Boolean> {
-        delay(2000)
-        Log.d(LOG_REQUEST, "请求2请求完成")
-        emit(true)
-    }
-    val unbind = MutableSharedFlow<Boolean>()
+    private val repository = ApiRepository()
 
-    init {
+    val flowResult1 = MutableStateFlow(BaseResult<Int>(BaseResult.STATUS_SUCCESS))
+    val flowResult2 = MutableStateFlow(BaseResult<Int>(BaseResult.STATUS_SUCCESS))
+    val flowResult3 = MutableStateFlow(BaseResult<Sina>(BaseResult.STATUS_SUCCESS))
+
+    val loading = combine(flowResult1, flowResult2, flowResult3) { f1, f2, f3 ->
+        f1.status == BaseResult.STATUS_LOADING ||
+        f2.status == BaseResult.STATUS_LOADING ||
+        f3.status == BaseResult.STATUS_LOADING
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(), false)
+
+    var index1 = 0
+    var index2 = 0
+
+    /**
+     * 模拟同时请求多个接口（切后台与旋转屏幕）
+     */
+    fun request1() {
         viewModelScope.launch {
-            listOf(flowResult1, flowResult2).merge()
-                    .onStart {
-                        Log.d(LOG_REQUEST, "showDialog")
-                    }.onCompletion {
-                        Log.d(LOG_REQUEST, "dismissDialog")
-                    }.collect {
-
-                    }
+            flowResult1.value = BaseResult(BaseResult.STATUS_LOADING, index1)
+            flowResult2.value = BaseResult(BaseResult.STATUS_LOADING, index2)
+            delay(2000)
+            index1++
+            flowResult1.value = BaseResult(BaseResult.STATUS_SUCCESS, index1)
+            delay(1000)
+            index2++
+            flowResult2.value = BaseResult(BaseResult.STATUS_SUCCESS, index2)
         }
     }
 
-    fun testRequest() {
-        Log.d(LOG_REQUEST, "请求1开始请求")
-        Log.d(LOG_REQUEST, "请求2开始请求")
+    /**
+     * 真实请求测试
+     */
+    fun requestSina() {
         viewModelScope.launch {
-            delay(3000)
-            flowResult1.
-        }
-        viewModelScope.launch {
-            flowResult2.collect {
-
+            flowResult3.value = BaseResult(BaseResult.STATUS_LOADING, null)
+            Log.d(LOG_REQUEST, "requestSina collect1")
+            repository.sina.collect {
+                Log.d(LOG_REQUEST, "requestSina collect2")
+                flowResult3.value = BaseResult(BaseResult.STATUS_SUCCESS, it)
             }
         }
     }

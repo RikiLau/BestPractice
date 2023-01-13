@@ -57,7 +57,7 @@ dependencies {
     implementation "androidx.activity:activity-ktx:1.6.1"
 
     // 协程
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     // okhttp
     implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.1"))
