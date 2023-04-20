@@ -6,6 +6,7 @@
     <string name="fun_widget">小组件</string>
     <string name="fun_coroutines">协程测试</string>
     <string name="fun_request_manager">统一管理loading</string>
+    <string name="fun_floating">悬浮窗</string>
 
     <string name="permission_camera_request">拍照权限申请</string>
     <string name="start_camera_activity">打开了相机界面</string>
@@ -13,4 +14,6 @@
     <string name="ok">好的</string>
     <string name="request1">接口1请求</string>
     <string name="request2">接口2请求</string>
+
+    <string name="show_floating_view">展示悬浮窗</string>
 </resources>

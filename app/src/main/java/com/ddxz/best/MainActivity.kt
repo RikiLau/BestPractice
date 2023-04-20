@@ -35,5 +35,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, RequestManagerActivity::class.java)
             startActivity(intent)
         }
+        binding.tvFloating.setOnClickListener {
+            val intent = Intent(this, RequestManagerActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
