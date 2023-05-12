@@ -25,6 +25,7 @@ class CarWidgetProvider: AppWidgetProvider() {
     }
 
     var job: Job? = null
+    var appWidgetId: Int? = null
 
     override fun onUpdate(
         context: Context,
@@ -83,7 +84,38 @@ class CarWidgetProvider: AppWidgetProvider() {
     override fun onReceive(context: Context?, intent: Intent?) {
         super.onReceive(context, intent)
         when (intent?.getStringExtra("type")) {
+            "car" -> {
 
+                val appWidgetId = intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, -1)
+
+                if (context == null || appWidgetId == -1) {
+                    return
+                }
+
+                MainScope().launch {
+
+                    val views: RemoteViews = RemoteViews(
+                        context.packageName, R.layout.widget_car
+                    ).apply {
+                    }
+
+
+                    views.setOnClickPendingIntent(
+                        R.id.bg,
+                        PendingIntent.getBroadcast(context, appWidgetId, Intent().apply {
+                            this.component = ComponentName(context, CarWidgetProvider::class.java)
+                            this.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
+                            this.putExtra("type", "car")
+                            this.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
+
+                        }, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+                    )
+
+                    views.removeAllViews(R.id.flBrake)
+                    views.addView(R.id.flBrake, RemoteViews(context.packageName, R.layout.ani_car_brake))
+                    AppWidgetManager.getInstance(context).updateAppWidget(appWidgetId, views)
+                }
+            }
         }
     }
 }

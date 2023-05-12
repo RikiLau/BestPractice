@@ -3,7 +3,7 @@
     android:minWidth="320dp"
     android:minHeight="320dp"
     android:updatePeriodMillis="30000"
-    android:previewImage="@drawable/night"
+    android:previewImage="@drawable/car_brake"
     android:initialLayout="@layout/widget_car"
     android:resizeMode="none"
     android:widgetCategory="home_screen">

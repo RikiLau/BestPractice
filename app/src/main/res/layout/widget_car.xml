@@ -6,7 +6,8 @@
     android:minWidth="320dp"
     android:minHeight="320dp"
     android:id="@+id/bg"
-    android:padding="@dimen/widget_margin">
+    android:padding="@dimen/widget_margin"
+    android:background="#666">
 
     <!--<RelativeLayout
         android:id="@+id/fl"
@@ -24,15 +25,7 @@
     </RelativeLayout>-->
 
     <FrameLayout
-        android:id="@+id/flAnimBrake"
+        android:id="@+id/flBrake"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layoutAnimation="@anim/car_brake_animation">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/car_brake" />
-
-    </FrameLayout>
+        android:layout_height="match_parent"/>
 </RelativeLayout>
