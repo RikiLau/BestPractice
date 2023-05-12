@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="320dp"
+    android:minHeight="320dp"
+    android:id="@+id/bg"
+    android:padding="@dimen/widget_margin">
+
+    <!--<RelativeLayout
+        android:id="@+id/fl"
+        android:layout_centerInParent="true"
+        android:background="#666"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/ivDay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dashboard_bear_animation_00001"/>
+    </RelativeLayout>-->
+
+    <FrameLayout
+        android:id="@+id/flAnimBrake"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/car_brake_animation">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/car_brake" />
+
+    </FrameLayout>
+</RelativeLayout>
