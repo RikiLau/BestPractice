@@ -11,7 +11,9 @@ import com.ddxz.best.constant.LOG_REQUEST
 import com.ddxz.best.databinding.ActivityRequestBinding
 import com.ddxz.best.net.BaseResult
 import com.ddxz.best.view.dialog.LoadingDialogFragment
+import com.ddxz.best.widget.day.AnimUpdate
 import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.MutableStateFlow
 
 /**
  * 多接口请求时，统一loading弹窗，以及flow的使用
@@ -27,6 +29,7 @@ class RequestManagerActivity: AppCompatActivity() {
     val viewModel by viewModels<RequestManagerViewModel>()
     var index1 = 0
     var index2 = 0
+    val updateSignal = MutableStateFlow(AnimUpdate())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
