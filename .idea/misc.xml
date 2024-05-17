@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/drawable/shape_dna_bg_gray.xml" value="0.29957805907172996" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/activity_coroutines.xml" value="0.28974358974358977" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/activity_empty.xml" value="0.28974358974358977" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/activity_permission.xml" value="0.2368659420289855" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/activity_request.xml" value="0.28974358974358977" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/dialog_loading.xml" value="0.28974358974358977" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/item_sina.xml" value="0.23052536231884058" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/view_anim_day_flipper2.xml" value="0.2901709401709402" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/view_anim_day_flipper_start.xml" value="0.2901709401709402" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/view_anim_view_flipper.xml" value="0.2901709401709402" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/view_anim_view_flipper2.xml" value="0.2901709401709402" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/view_anim_view_flipper_start.xml" value="0.2901709401709402" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/view_day.xml" value="0.2901709401709402" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/view_loading.xml" value="0.23052536231884058" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/view_night.xml" value="0.2901709401709402" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/widget_day_night.xml" value="0.2901709401709402" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/layout/widget_sina.xml" value="0.2368659420289855" />
+        <entry key="..\:/android/StudioProjects/BestPractice/app/src/main/res/xml/example_appwidget_info.xml" value="0.2368659420289855" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
