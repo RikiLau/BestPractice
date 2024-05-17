@@ -14,9 +14,6 @@ import java.util.*
 class WidgetUpdateWorker(val appContext: Context, workerParams: WorkerParameters):
         CoroutineWorker(appContext, workerParams) {
 
-    companion object {
-        const val KEY_RESULT = "KEY_RESULT"
-    }
 
     override suspend fun doWork(): Result {
 
@@ -26,7 +23,7 @@ class WidgetUpdateWorker(val appContext: Context, workerParams: WorkerParameters
         // Do the work here--in this case, upload the images.
 
         val response = ApiService.api.weiboHot()
-        if (response?.code == 200) {
+        if (response.code == 200) {
 
             Log.d(LOG_FUN_WIDGET_UPDATE, "${response.newslist?.size} ${SinaWidgetProvider.list?.get(0)?.hotword}")
             SinaWidgetProvider.list = response.newslist

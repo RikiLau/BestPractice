@@ -24,7 +24,6 @@ import java.util.concurrent.TimeUnit
 class SinaWidgetProvider: AppWidgetProvider() {
 
     companion object {
-        const val TAG = "SinaWidgetProvider"
         const val ACTION_SINA = "ACTION_SINA"
         var list: List<Newslist?>? = null
         var widgetIds: IntArray = intArrayOf()
@@ -58,7 +57,7 @@ class SinaWidgetProvider: AppWidgetProvider() {
 
             CoroutineScope(Job() + Dispatchers.Main.immediate).launch {
                 val response = ApiService.api.weiboHot()
-                if (response?.code == 200) {
+                if (response.code == 200) {
                     list = response.newslist
                     Log.d(LOG_FUN_SINA, "list size ${list?.size}")
                     views.setRemoteAdapter(R.id.list, WidgetRemoteViewsService.getSinListAdapterIntent(context, appWidgetId))
