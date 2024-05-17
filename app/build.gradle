@@ -5,16 +5,17 @@ plugins {
 }
 
 android {
-    compileSdk 33
+    compileSdk 32
 
     defaultConfig {
         applicationId "com.ddxz.best"
         minSdk 23
-        targetSdk 33
+        targetSdk 32
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
@@ -41,7 +42,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation fileTree(include: ['*.jar', '*.aar'], dir: '../aar')
 
-    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -54,7 +55,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
     implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
-    implementation "androidx.activity:activity-ktx:1.6.1"
+    implementation "androidx.activity:activity-ktx:1.5.0"
 
     // 协程
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
@@ -78,5 +79,6 @@ dependencies {
     // workManager Kotlin + coroutines
     implementation "androidx.work:work-runtime-ktx:2.7.1"
 
+    implementation "org.greenrobot:eventbus:3.1.1"
 
 }
