@@ -10,7 +10,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.util.Log
+import android.view.View
 import android.widget.RemoteViews
+import androidx.core.view.doOnPreDraw
+import androidx.core.widget.createExactSizeAppWidget
 import com.ddxz.best.R
 import com.ddxz.best.constant.LOG_FUN_DAY
 import kotlinx.coroutines.*
